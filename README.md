@@ -1,34 +1,64 @@
-# ByggMål - DIY Blueprint Generator
+# ByggMål
 
-AI-drevet app som genererer nøyaktige mål, materiallister og kuttelister for DIY-prosjekter.
+**AI-drevet DIY Blueprint Generator** – få nøyaktige mål, materiallister og kuttelister for dine prosjekter på sekunder.
+
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-18-blue?logo=react)](https://reactjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38bdf8?logo=tailwindcss)](https://tailwindcss.com/)
+[![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o--mini-412991?logo=openai)](https://openai.com/)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/GizzZmo/byggmal?style=social)](https://github.com/GizzZmo/byggmal)
+
+![ByggMål App](https://raw.githubusercontent.com/GizzZmo/byggmal/main/assets/screenshot-main.png)
 
 ## Funksjoner
 
-- Beskriv prosjektet ditt (f.eks. "Bokhylle i eik, 120 cm høy, 80 cm bred")
-- AI beregner dimensjoner, materialer og kutteliste
-- Minimerer materialsvinn
-- Eksporter som PDF (planlagt)
-- Delelister for elektronikkprosjekter
+- **Prosjektbeskrivelse** – Skriv fritt eller velg ferdig mal (bokhylle, bord, Bluetooth-høytaler, skjenk, sengegavl)
+- **AI-drevet dimensjonering** – Strukturert JSON med nøyaktige mål, materialer og monteringssteg
+- **Kutteliste + optimering** – Automatisk estimat av antall standardplater (2440×1220 mm) med arealberegning
+- **PDF-eksport** – Last ned komplett prosjekt som PDF (jspdf)
+- **Lagring** – Prosjekter lagres lokalt i nettleseren (localStorage)
+- **Demo-modus** – Fungerer uten OpenAI-nøkkel med eksempeldata
 
 ## Teknologistakk
 
 - Next.js 14 (App Router)
-- React
-- Tailwind CSS
-- OpenAI API for AI-generering (structured JSON output)
+- React 18 + Tailwind CSS
+- OpenAI API (structured JSON output)
+- jspdf for PDF-generering
+
+## Skjermbilder
+
+### Hovedskjerm med maler
+![Hovedskjerm](https://raw.githubusercontent.com/GizzZmo/byggmal/main/assets/screenshot-main.png)
+
+### Resultat med kuttliste og optimering
+![Resultat](https://raw.githubusercontent.com/GizzZmo/byggmal/main/assets/screenshot-result.png)
+
+### Lagrede prosjekter
+![Lagrede](https://raw.githubusercontent.com/GizzZmo/byggmal/main/assets/screenshot-saved.png)
 
 ## Kom i gang
 
-1. Klon repoet
-2. Installer avhengigheter: `npm install`
-3. Lag `.env.local` med `OPENAI_API_KEY=din_nøkkel`
-4. Kjør `npm run dev`
-5. Åpne http://localhost:3000
+```bash
+git clone https://github.com/GizzZmo/byggmal.git
+cd byggmal
+npm install
+cp .env.example .env.local
+# Legg inn OPENAI_API_KEY=sk-... i .env.local (valgfritt – demo fungerer uten)
+npm run dev
+```
 
-## Eksempel på AI-respons
+Åpne [http://localhost:3000](http://localhost:3000)
 
-Se koden i `app/api/generate/route.js` for system-prompt og forventet format.
+## Deploy
+
+Repoet er klart for Vercel. Koble det til din Vercel-konto for automatisk deploy ved push.
 
 ## Bidrag
 
-Velkommen! Dette er en MVP.
+Issues og pull requests er velkomne! Dette er en aktiv MVP.
+
+---
+
+Laget med ❤️ for hobbysnekkere og skapere.
